@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Consult Hope</title>
+</head>
+<body>
+
+      <h1>Consult Hope</h1>
+   
+   <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Exam</th>
+                <th>Date Exam</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="exam: ${list}">
+                <td th:text="${exam.id}"></td>
+                <td th:text="${exam.name}"></td>
+                <td th:text="${exam.exam}"></td>
+                <td th:text="${exam.dateExam}"></td>
+                <td th:text="${exam.resultExam}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+ </body>
+</html>
+
